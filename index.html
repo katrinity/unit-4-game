@@ -5,6 +5,8 @@
     <title>CrystalsCollector Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 <body>
 <div class = "container">
@@ -25,17 +27,18 @@
 </div>
 <div class = "comp">
     <div class = "compguess"> 
+        <p id="randomnumber"></p>
     </div>
     <div class = "result">
-       <p>Wins:  </p> 
-       <p>Losses:  </p> 
+       <p id="wins"> Wins: 0 </p> 
+       <p id="losses"> Losses: 0 </p> 
     </div>
 </div>
     <div class = "images">
-     <img class="crystal" src="assets/images/crystal1.png" alt="crystal">
-     <img class="crystal" src="assets/images/crystal2.png" alt="crystal">
-     <img class="crystal" src="assets/images/crystal3.png" alt="crystal">
-     <img class="crystal" src="assets/images/crystal4.png" alt="crystal">
+            <button class="Button1"><img class="crystal" src="assets/images/crystal1.png" alt="crystal">
+                <button class="Button2"><img class="crystal" src="assets/images/crystal2.png" alt="crystal">
+                    <button class="Button3"><img class="crystal" src="assets/images/crystal3.png" alt="crystal">
+                        <button class="Button4"><img class="crystal" src="assets/images/crystal4.png" alt="crystal">
     </div>
 
     <div class = "scoretext">
