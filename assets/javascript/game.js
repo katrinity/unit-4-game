@@ -29,6 +29,21 @@ const reset = () => {
     
 };
 
+ play = () => {
+    if (number === score_counter) {
+        num_wins += 1;
+        $('#wins').html(`Wins: ${num_wins}`);
+        $('#message').html ('You won!');
+        reset();
+    } else if (number < score_counter) {
+        num_losses += 1;
+        $('#losses').html(`Losses: ${num_losses}`);
+        $('#message').html ('You lost!');
+        reset();
+    } 
+        
+};
+
 $(document).ready(() => {
     reset();
    // $('.button1').html(crystalvalue1);
@@ -39,67 +54,25 @@ $(document).ready(() => {
     $('.button1').on("click", event => {
         score_counter+=crystalvalue1;
         $('#score_counter').html(score_counter);
-        if (number === score_counter) {
-            num_wins += 1;
-            $('#wins').html(`Wins: ${num_wins}`);
-            $('#message').html ('You won!');
-            reset();
-        } else if (number < score_counter) {
-            num_losses += 1;
-            $('#losses').html(`Losses: ${num_losses}`);
-            $('#message').html ('You lost!');
-            reset();
-        } 
-            
+        play();
+        
     });
     $('.button2').on("click", event => {
         score_counter+=crystalvalue2;
         $('#score_counter').html(score_counter);
-        if (number === score_counter) {
-            num_wins += 1;
-            $('#wins').html(`Wins: ${num_wins}`);
-            $('#message').html ('You won!');
-            reset();
-        } else if(number < score_counter) {
-            num_losses += 1;
-            $('#losses').html(`Losses: ${num_losses}`);
-            $('#message').html ('You lost!');
-            reset();
-        } 
+        play ();
             
     });
     $('.button3').on("click", event => {
         score_counter+=crystalvalue3;
         $('#score_counter').html(score_counter);
-        if (number === score_counter) {
-            num_wins += 1;
-            $('#wins').html(`Wins: ${num_wins}`);
-            $('#message').html ('You won!');
-            reset();
-        } else if(number < score_counter) { 
-            num_losses += 1;
-            $('#losses').html(`Losses: ${num_losses}`);
-            $('#message').html ('You lost!');
-            reset();
-        } 
-          
+        play ();
             
     });
     $('.button4').on("click", event => {
         score_counter+=crystalvalue4;
         $('#score_counter').html(score_counter);
-        if (number === score_counter) {
-            num_wins += 1;
-            $('#wins').html(`Wins: ${num_wins}`);
-            $('#message').html ('You won!');
-            reset();
-        } else if(number < score_counter) {
-            num_losses += 1;
-            $('#losses').html(`Losses: ${num_losses}`);
-            $('#message').html ('You lost!');
-            reset();
-        } 
-         
+        play ();
     });
 
 });
