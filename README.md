@@ -32,3 +32,5 @@ After I  completed tis game, I wend back and added function ```play ```
 ```
 
 This way I didn't have to rewright the same code over and over again after every ```$('.button1').on("click", event => ```
+
+Deployed project link https://katrinity.github.io/unit-4-game/
